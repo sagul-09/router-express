@@ -42,7 +42,7 @@ route.get("/:id", (req, res) => {
         '"' +
         output.agent +
         '"' +
-        " and the role of the agent is " +
+        " and the role played by the agent is " +
         '"' +
         output.role +
         '"'
