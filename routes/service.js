@@ -24,10 +24,10 @@ let serviceList = [
 ];
 
 route.get('/:id', (req, res) => {
-  res.send(req.service.domain);
+  res.send(req.service.domain);  //domain are the names of the service list items
 });
 route.param('id', (req, res, next, id) => {
-  req.service = serviceList[id - 1];
+  req.service = serviceList[id - 1]; //-1 is used bcoz the array starts from 0 so the index to recognize 1 we use -1 in this 
   next();
 });
 export default route;
