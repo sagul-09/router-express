@@ -4,7 +4,8 @@ import about from "./routes/about.js";
 import agents from "./routes/agents.js";
 import login from "./routes/login.js";
 import contact from "./routes/contact.js";
-import service from "./routes/service.js";
+import service from "./routes/serviceMiddleware.js";
+import array from "./routes/serviceArray.js";
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use("/agents", agents);
 app.use("/login", login);
 app.use("/contact", contact);
 app.use("/service", service);
+app.use("/array", array);
 
 app.listen(1200, () => {
   console.log("Local host is working");
