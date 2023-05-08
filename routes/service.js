@@ -2,7 +2,7 @@ import express from "express";
 const route = express.Router();
 
 route.get("/", (req, res) => {
-  res.send("Service Agents Available slect from 1-5");
+  res.send("Service's Available slect from 1-5");
 });
 
 let serviceList = [
@@ -34,7 +34,7 @@ route.get("/:id", (req, res) => {
   if (output) {
     res.send("The selected service is " + '"' + output.service + '"');
   } else {
-    res.json("Invalid agent");
+    res.json("Invalid service");
   }
 });
 export default route;
